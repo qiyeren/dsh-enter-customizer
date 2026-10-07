@@ -1,0 +1,45 @@
+{
+  "name": "dsh-enter-customizer",
+  "description": "DSH web plugin: customize the chat composer input shortcuts (Enter / Ctrl+Enter / Shift+Enter / Alt+Enter / send button) with send / queue-while-busy / newline / no-op behaviors, backed by durable user settings. Fork compatible with DSH 0.2.0-rc.2.",
+  "version": "0.2.0",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "assets",
+    "README.md"
+  ],
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots",
+        "sessions",
+        "configForms"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/schemastery": "~3.18.4",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.4",
+    "@deepseek-ai/schemastery": "~3.18.4",
+    "react": "^18.2.0"
+  }
+}

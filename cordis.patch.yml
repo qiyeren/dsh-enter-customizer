@@ -1,0 +1,12 @@
+# DSH Enter Customizer bundle patch: inserts the plugin row over the empty
+# profile root (same one-insert pattern as the dsh-base bundle).
+#
+# 0.2.0-rc.2 compatibility: the entry `id` below IS the settings namespace id.
+# @deepseek-ai/dsh-settings no longer exposes `settingsNamespace()` /
+# `register()`; it projects each active plugin's own `Config` schema into a
+# settings form keyed by `entry.options.id` (`ns: entry.options.id`). The
+# client half reads the section through `ctx.configForms.get("<this id>")`, so
+# the two must stay identical.
+- insert:
+    - id: dsh-enter-customizer
+      name: dsh-enter-customizer
