@@ -1,6 +1,9 @@
 # DSH Enter Customizer（DSH 0.2.0-rc.2 兼容 fork）
 
-fork 自 [Boliban/dsh-enter-customizer](https://github.com/Boliban/dsh-enter-customizer)，
+> **本仓库是 [Boliban/dsh-enter-customizer](https://github.com/Boliban/dsh-enter-customizer) 的 fork。**
+> 原作者：Boliban。本 fork 仅做 DSH **0.2.0-rc.2** 兼容性修复，功能与默认行为完全不变。
+> （注：本仓库通过 `gh repo create` 建立，GitHub 上未显示为 fork 网络，但来源与归属如上。）
+
 修复其与 DSH **0.2.0-rc.2** 的兼容性问题。功能与默认行为完全不变。
 
 ## 功能
